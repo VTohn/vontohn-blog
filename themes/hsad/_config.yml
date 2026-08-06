@@ -1,0 +1,41 @@
+avatar: /images/avatar.jpg
+sidebar_background: /images/background.png
+accent_color: '#496b8c'
+accent_soft: '#dce8f0'
+brand_name: VTohn
+brand_subtitle: 欢迎来到万冬的博客
+sidebar_note: 只是一些写下来的瞬间。
+hero:
+  title: ''
+  kicker: ''
+  description: ''
+excerpt_length: 56
+menu:
+  - name: 首页
+    path: /
+  - name: 归档
+    path: /archives/
+  - name: 分类
+    path: /categories/
+  - name: 标签
+    path: /tags/
+  - name: 搜索
+    path: /search/
+  - name: 友链
+    path: /links/
+  - name: 关于
+    path: /about/
+social:
+  - name: GitHub
+    url: https://github.com/VTohn
+footer:
+  text: 记录学习与生活。
+  support:
+    enable: false
+    title: ''
+    link: ''
+    logo: ''
+    prefix: ''
+    suffix: ''
+  license_name: CC BY-NC 4.0
+  license_url: https://creativecommons.org/licenses/by-nc/4.0/deed.zh-hans

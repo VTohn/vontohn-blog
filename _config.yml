@@ -8,7 +8,7 @@ subtitle: ''
 description: '欢迎来到万冬的博客'
 keywords:
 author: John Doe
-language: zh
+language: zh-CN
 timezone: 'Asia/Shanghai'
 
 # URL
@@ -40,20 +40,28 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
-syntax_highlighter: highlight.js
+syntax_highlighter: prismjs
 highlight:
+  enable: false
   line_number: true
   auto_detect: false
   tab_replace: ''
   wrap: true
   hljs: false
 prismjs:
+  enable: true
   preprocess: true
-  line_number: true
+  line_number: false
   tab_replace: ''
+
+# Search
+search:
+  path: search.xml
+  field: post
+  content: true
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -96,7 +104,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: mustom
+theme: hsad
 
   # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
