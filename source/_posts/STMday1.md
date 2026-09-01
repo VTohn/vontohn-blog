@@ -1,7 +1,8 @@
 ---
 title: STMday1
 date: 2026-08-18 20:45:23
-tags: 技术
+tags: 
+categories: 技术
 ---
 
 ### 以下内容由所记录的知识库整理而来
