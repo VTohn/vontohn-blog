@@ -2,6 +2,10 @@
 title: 关于Omori的想法
 date: 2026-09-05 23:56:49
 tags:
+  - Omori
+  - 游戏
+  - 杂谈
+  - 精神分析
 categories: 随笔
 ---
 #### 总的来说
