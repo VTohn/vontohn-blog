@@ -9,10 +9,10 @@ tags:
 categories: 技术
 ---
 
-### 前情提要
+## 前情提要
 小梅找我说导师给他批下来一张5090,跑什么CV管线。很显然我并不知道什么CV管线什么多面体是啥，但是他要连接实验室的服务器————这下听懂了：用SSH啊。
 
-### SSH简介
+## SSH简介
 SSH（Secure Shell，安全外壳协议）是一套**加密的远程登录协议**：它让客户端通过网络登录到一台远程主机，像坐在那台机器前面一样执行命令、传文件、跑程序。相比老旧的明文协议（telnet、ftp），SSH 的所有通信都是加密的——即使流量被截获，也看不到密码和内容。
 
 关于SSH你需要了解的基础知识：
@@ -22,11 +22,11 @@ SSH（Secure Shell，安全外壳协议）是一套**加密的远程登录协议
 - **加密分两层**：用非对称加密（RSA / Ed25519）完成身份认证和密钥交换，再用对称加密加密后续所有数据；
 - 一次认证之后通常可以**免密**：把客户端的公钥放进服务端的 `authorized_keys`，以后登录不再输密码。
 
-### SSH配置方法
+## SSH配置方法
 
 下面以「Windows 本机（客户端） → 机房 Ubuntu（服务端）」为例。
 
-- #### 服务端
+- ### 服务端
 
     ```bash
     # 1. 安装并启动 sshd
@@ -63,7 +63,7 @@ SSH（Secure Shell，安全外壳协议）是一套**加密的远程登录协议
     3. 如果要跑图形程序，Linux端的体验较好  
 
 
-- #### 客户端
+- ### 客户端
 
     Windows 10/11 自带 OpenSSH 客户端，也可在*可选安装*里查看。验证：
     
@@ -74,7 +74,7 @@ SSH（Secure Shell，安全外壳协议）是一套**加密的远程登录协议
     *如果提示找不到 ssh，有可能是装好了但 `C:\Windows\System32\OpenSSH` 没进 PATH。*
 
 
-### SSH连接
+## SSH连接
 
 **登录**：
 
@@ -92,7 +92,7 @@ ssh-keygen -t ed25519
 Get-Content $env:USERPROFILE\.ssh\id_ed25519.pub | ssh 用户名@192.168.x.x "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys && chmod 700 ~/.ssh && chmod 600 ~/.ssh/authorized_keys"
 ```
 
-### 图形窗口？Wayland? 
+## 图形窗口？Wayland? 
 
 ssh 本身不开图形窗口，它是纯命令行工具。 想让远程的程序窗口出现在本地屏幕上，靠的是 **X11 转发**：ssh 把「画窗口的图形指令流」加密传回本地，而本地必须有一个 X 服务器负责把它画出来。
 
@@ -141,7 +141,7 @@ export QT_QPA_PLATFORM=xcb
 | `cannot open display` | 忘了 `-X`，或 VcXsrv 没开 / 没勾 Disable access control | 重连 `ssh -X`，检查 XLaunch 设置 |
 | 窗口黑屏 / 一闪而过 | Qt 程序在 Wayland 下闹别扭 | `export QT_QPA_PLATFORM=xcb` 后重跑 |
 
-### 校园网？VPN?
+## 校园网？VPN?
 
 通用流程（校外 → 机房）：
 

@@ -8,7 +8,7 @@ tags:
 categories: 技术
 ---
 
-### 以下内容由所记录的知识库整理而来
+## 以下内容由所记录的知识库整理而来
 
 
 
@@ -18,7 +18,7 @@ categories: 技术
 
 
 
-#### STM32 点灯：GPIO 输出原理与 HAL 操作
+### STM32 点灯：GPIO 输出原理与 HAL 操作
 
 
 让某个 GPIO 引脚按程序输出高/低电平；引脚身份 = 端口字母 + 引脚号（如 PA0）；
@@ -54,7 +54,7 @@ categories: 技术
 
 
 
-#### STM32 时钟系统（硬件原理：RCC / HSI / HSE / PLL / 分频）
+### STM32 时钟系统（硬件原理：RCC / HSI / HSE / PLL / 分频）
 
 
 
@@ -77,7 +77,7 @@ categories: 技术
 
 
 
-#### SystemClock_Config() 代码解析（软件写法）
+### SystemClock_Config() 代码解析（软件写法）
 
 
 【核心定义】SystemClock_Config() 是 HAL 规定的全局时钟配置函数，通过两张"配置单"结构体完成：osc 单（选时钟源/开 PLL）交给 HAL_RCC_OscConfig，clk 单（主频来源/总线分频）交给 HAL_RCC_ClockConfig；写法固定，v0.1 是 HSI 16MHz 的最简形态。
@@ -127,7 +127,7 @@ categories: 技术
 
 
 
-#### SysTick 与中断基础（HAL_Delay 的时间心脏）
+### SysTick 与中断基础（HAL_Delay 的时间心脏）
 
 
 【核心定义】SysTick 是芯片内置的"系统滴答定时器"，HAL 将其配置为每 1ms 产生一次中断；中断 = 主程序执行中"被闹钟插队"去执行处理函数再回来；HAL_Delay 依赖 SysTick 中断更新全局时间计数，缺 SysTick_Handler 处理函数则计数不动、延时卡死。
